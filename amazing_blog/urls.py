@@ -18,6 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from amazing_blog import views
 urlpatterns = [
-    path('', views.index),
+    path('', views.index, name='index'),
+    path('about/', views.about, name='about'),
+    path('category/', views.category, name='category'),
+    path('contact/', views.contact, name='contact'),
+    path('post/detail/', views.postDetail, name='post_detail'),
+    path('privacy/', views.privacy, name='privacy'),
     path('admin/', admin.site.urls),
 ]
